@@ -108,5 +108,30 @@ public class Hometask2 {
                 System.out.println("Вы угадали");
             }
         }
+        // Задание 5
+        double randomNum = Math.random();
+        randomNum = (randomNum * 1000) % 1000;
+        int number = (int) randomNum;
+
+
+        while (number > 10) {
+
+            if (number > 500) {
+                randomNum = Math.random();
+                randomNum = (randomNum * 1000) % 1000;
+                number = (int) randomNum;
+
+            } else {
+                break;
+            }
+        }
+
+        if (number > 25) {
+            if (number < 200) {
+                System.out.println("Число " + number + " содержится в интервале");
+            } else System.out.println("Число " + number + " не содержится в интервале");
+
+
+        } else System.out.println("Число " + number + "не содержится в интервале");
     }
 }
