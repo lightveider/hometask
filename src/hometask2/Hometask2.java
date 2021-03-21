@@ -63,7 +63,7 @@ public class Hometask2 {
                 System.out.println("Моющего осталось " + washing);
                 plate--;
                 if (plate == 0) {
-                    System.out.println("Моющего после того как закончились тарелки осталось " + washing);
+                    System.out.println("Моющего после того как закончились тарелки осталось " + washing + "моющего");
                 }
 
 
