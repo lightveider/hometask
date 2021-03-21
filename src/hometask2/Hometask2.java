@@ -63,7 +63,7 @@ public class Hometask2 {
                 System.out.println("Моющего осталось " + washing);
                 plate--;
                 if (plate == 0) {
-                    System.out.println("Моющего после того как закончились тарелки осталось " + washing + "моющего");
+                    System.out.println("Моющего после того как закончились тарелки осталось " + washing);
                 }
 
 
@@ -108,6 +108,7 @@ public class Hometask2 {
                 System.out.println("Вы угадали");
             }
         }
+        //задание 5
         // Задание 5
         double randomNum = Math.random();
         randomNum = (randomNum * 1000) % 1000;
