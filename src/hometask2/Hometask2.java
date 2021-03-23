@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Hometask2 {
     public static void main(String[] args) {
+        //
         //Задание 1
         int count = 45;
 
