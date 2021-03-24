@@ -46,7 +46,7 @@ public class Hometask2 {
                 System.out.println("Произведение " + (a * b * c));
                 break;
             case 9:
-                System.out.println("Частоное " + (a / b / c));
+                System.out.println("Частоное " + ((double) a / b / c));
                 break;
             default:
                 System.out.println("Третье число должно быть одним из списка 3 5 7 9 ");
