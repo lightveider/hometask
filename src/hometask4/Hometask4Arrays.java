@@ -14,7 +14,15 @@ public class Hometask4Arrays {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = Math.random() * 497 + 3;
             if (arr[i] < max) max = arr[i]; // поиск минимального
+                {minInd = i};
             if (arr[i] > min) min = arr[i]; // поиск максимального
+                {maxInd =i};
+
+           min ==
+           minInd =2;
+           max = 67
+           maxind =3;
+           // как запомнить максимальный и минимальный индекс
 
 
         }
@@ -23,6 +31,7 @@ public class Hometask4Arrays {
         System.out.println(max);
 
 */
+        // Вторая
         /*int counter = 0;
         int counterNeChet = 0;
         int array[] = {78, 32, 76, 100, 0, 6301, 331, 77, 24, 2, 90};
@@ -53,5 +62,7 @@ public class Hometask4Arrays {
 
         System.out.println(Arrays.toString(abc));
         System.out.println(Arrays.toString(cba));
+
+        // пятая задача рандом -3 +1
     }
 }
