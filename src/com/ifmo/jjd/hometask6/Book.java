@@ -3,23 +3,17 @@ package com.ifmo.jjd.hometask6;
 public class Book {
 
     public String bookName;
-    public Author author;
+    public Author Author;
     public int pages;
     public int publishedYear;
 
     public void setBookName(String bookName) {
-        if (bookName == null || bookName.trim().length()<1 ) {
-            throw  new IllegalArgumentException("Значение bookName <1");
+        if (bookName == null || bookName.trim().length() < 1) {
+            throw new IllegalArgumentException("Значение bookName <1");
         }
         this.bookName = bookName;
     }
 
-    public void setAuthors(String authors) {
-        if (authors == null || authors.trim().length()<3) {
-            throw new IllegalArgumentException("Значение Authors <3");
-        }
-        this.author = author;
-    }
 
     public void setPages(int pages) {
         if (pages < 0) {
@@ -49,13 +43,21 @@ public class Book {
         return publishedYear;
     }
 
+    public void setAuthor(com.ifmo.jjd.hometask6.Author author) {
+        Author = author;
+    }
+
+    public com.ifmo.jjd.hometask6.Author getAuthor() {
+        return Author;
+    }
+
     @Override
     public String toString() {
-        return "Book{" +
-                "bookName='" + bookName + '\'' +
-                ", authors='" + author + '\'' +
-                ", pages=" + pages +
-                ", publishedAt=" + publishedYear +
-                '}';
+        return " " +
+                "Название книги: " + bookName +
+                ", Автор " + Author +
+                ", Страниц " + pages +
+                ", Год Издания " + publishedYear +
+                ' ';
     }
 }
