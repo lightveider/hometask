@@ -1,63 +1,52 @@
 package com.ifmo.jjd.hometask6;
 
 public class Book {
+    //авторы
+    private String tittle;
+    private int pageCount;
+    private int year;
+    private Author[] authors; // = new Author[5];
 
-    public String bookName;
-    public Author Author;
-    public int pages;
-    public int publishedYear;
+    public Book(String tittle, int authorsCount) {
+        this.tittle = tittle;
+        authors = new Author[authorsCount]; // В конструктор мы передаём обязательные значения свойств и без них объект не может существовать
+    }
 
-    public void setBookName(String bookName) {
-        if (bookName == null || bookName.trim().length() < 1) {
-            throw new IllegalArgumentException("Значение bookName <1");
+    public void addAuthor(Author author) {   //метод добавляет по одному автору
+        for (int i = 0; i < authors.length; i++) {
+            if (authors[i] == null) {
+                authors[i] = author;
+                return;
+            }
+
         }
-        this.bookName = bookName;
+
     }
 
+    // необязательные параметры
 
-    public void setPages(int pages) {
-        if (pages < 0) {
-            throw new IllegalArgumentException("В книге не может быть страниц меньше нуля");
-        }
-
-        this.pages = pages;
+    public void setPageCount(int pageCount) {
+        this.pageCount = pageCount;
     }
 
-    public void setPublishedAt(int publishedYear) {
-        if (publishedYear < 700) {
-            throw new IllegalArgumentException("Первые книги датируются 700 г. нашей эры");
-        }
-        this.publishedYear = publishedYear;
+    public void setYear(int year) {
+        this.year = year;
     }
 
-    public String getBookName() {
-        return bookName;
+    public String getTittle() {
+        return tittle;
     }
 
-
-    public int getPages() {
-        return pages;
+    public int getPageCount() {
+        return pageCount;
     }
 
-    public int getPublishedAt() {
-        return publishedYear;
+    public int getYear() {
+        return year;
     }
 
-    public void setAuthor(com.ifmo.jjd.hometask6.Author author) {
-        Author = author;
+    public Author[] getAuthors() {
+        return authors;
     }
 
-    public com.ifmo.jjd.hometask6.Author getAuthor() {
-        return Author;
-    }
-
-    @Override
-    public String toString() {
-        return " " +
-                "Название книги: " + bookName +
-                ", Автор " + Author +
-                ", Страниц " + pages +
-                ", Год Издания " + publishedYear +
-                ' ';
-    }
 }
