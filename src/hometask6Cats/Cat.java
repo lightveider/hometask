@@ -6,6 +6,6 @@ public class Cat {
     private int speed;
     private int weight;
     private Mice[] miceCounter;
-    
+
 
 }
